@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:visibility="invisible"
         android:padding="8dp">
 
         <TextView
@@ -55,7 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_layout"
         android:layout_marginTop="40dp"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:visibility="invisible">
 
         <Button
             android:id="@+id/button_1"
@@ -63,17 +65,21 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_rowWeight="1"
+            android:onClick="checkAnswer"
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:text="33"
+            android:tag="0"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/button_2"
+            android:tag="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_rowWeight="1"
+            android:onClick="checkAnswer"
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:text="33"
@@ -84,6 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
+            android:tag="2"
+            android:onClick="checkAnswer"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
@@ -92,10 +100,12 @@
 
         <Button
             android:id="@+id/button_4"
+            android:tag="3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_rowWeight="1"
+            android:onClick="checkAnswer"
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:text="33"
@@ -108,7 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/grid_layout"
-        android:text="Correct Answer"
+        android:text=""
         android:textColor="#fff"
         android:id="@+id/answer_text_view"
         android:textSize="30sp"
